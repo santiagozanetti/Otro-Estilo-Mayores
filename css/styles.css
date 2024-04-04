@@ -3,6 +3,7 @@
 :root {
   --color-principal: rgb(17, 121, 42);
   --color-verde-claro: #80a571;
+  --color-texto: #5f727f;
   --negro: #13131a;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
@@ -40,10 +41,36 @@ header {
   height: 100px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-right: 20px;
+}
+
 .logo img {
   height: 100px;
-  margin-top: 50px;
+  width: 60px;
 }
+
+.logo-text h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.separator {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 5px;
+}
+
+.logo-text p {
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Resto de estilos... */
 
 .navbar ul {
   list-style: none;
@@ -86,7 +113,7 @@ header {
 /* --------------- HERO --------------- */
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)),
     url(/images/fondo.png);
   background-size: cover;
   background-position: center;
@@ -98,44 +125,56 @@ header {
   justify-content: center;
 }
 
-.content {
-  width: 100%;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #fff;
   text-transform: uppercase;
 }
 
-.content h1 {
-  font-size: 60px;
-  margin-top: 80px;
-}
-
-.content p {
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 25px;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .buttons {
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid #009688;
-  background: transparent;
+  width: 150px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 2px solid #fff;
+  background-color: transparent;
   color: #fff;
   cursor: pointer;
-  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
-  background-color: #009688;
-  transition: 0.3s ease;
+  background-color: var(--color-verde-claro);
+  color: #fff;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 100vh; /* Ajuste de altura para dispositivos móviles */
+    padding: 30px; /* Reducción del relleno para dispositivos móviles */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    margin-bottom: 10px; /* Reducción del margen inferior */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    margin-bottom: 10px; /* Reducción del margen inferior */
+  }
 }
 
 /* --------------- Media Queries -------------- */
@@ -188,19 +227,19 @@ header {
   font-size: 36px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: var(--color-principal);
+  color: var(--color-verde-claro);
 }
 
 .about-us-content h3 {
   font-weight: 300;
-  margin-bottom: 20px; /* Reducir el espacio inferior */
+  margin-bottom: 25px;
+  color: var(--color-texto);
 }
 
 .card {
   display: flex;
-  max-width: 1100px; /* Ajusta el ancho máximo de la tarjeta */
-  margin: auto; /* Centra la tarjeta */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+  max-width: 1100px;
+  margin: auto;
 }
 
 .about-us-text,
@@ -211,7 +250,7 @@ header {
 .about-us-text p {
   text-align: center;
   font-size: 18px;
-  color: #666;
+  color: var(--color-texto);
   line-height: 1.6;
   padding: 20px;
 }
@@ -411,15 +450,22 @@ header {
 }
 
 .service-title {
-  margin-bottom: 20px;
-  color: var(--negro);
-  font-size: 26px;
+  color: var(--color-verde-claro);
+  font-size: 24px;
+  line-height: 38px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .service-description {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(--negro);
+  font-size: 16px;
+  color: #5f727f;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25px;
+  margin-top: 14px;
+  text-align: center;
 }
 
 .view-all-btn {
@@ -436,7 +482,8 @@ header {
 }
 
 .view-all-btn:hover {
-  background-color: var(--color-principal);
+  background-color: #94bb8a;
+  transition: 0.3s ease-in-out;
 }
 
 /* ---------------------- GALERIA DE FOTOS ------------------------ */
@@ -469,16 +516,22 @@ img {
 .gallery-section {
   padding: 40px;
   margin-top: 20px;
+  background-color: #f7f7f7;
 }
+
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 2px;
   padding: 20px;
 }
-.container .gallery-title {
+
+.gallery-title {
   font-size: 2.3rem;
   text-transform: uppercase;
+  text-align: center;
+  color: var(--color-verde-claro);
 }
 
 .gallery-item {
@@ -488,7 +541,6 @@ img {
 .gallery-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -660,8 +712,9 @@ img {
 
 .faq-title {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--color-verde-claro);
+  text-transform: uppercase;
 }
 
 .faq-container {
@@ -708,68 +761,102 @@ img {
 
 /* ---------------------------------- FOOTER ------------------------------- */
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 50px 0;
+  padding: 20px;
 }
-.footer__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+
+.footer-logo img {
+  height: 80px;
 }
-.footer__section {
+
+.footer-content {
   flex: 1;
-  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.copyright {
+  font-size: 14px;
   text-align: center;
 }
-.footer__section i {
-  font-size: 20px;
-  margin-right: 10px;
-}
-.footer__section p {
-  margin-bottom: 1rem;
-}
-.footer__heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding: 10px;
+
+/* -----------------------------  PAG SERVICIOS -------------------------------- */
+
+.service-header {
+  background-color: var(--color-verde-claro);
+  height: 80px; /* Ajustar la altura del navbar */
+  display: flex; /* Usar flexbox para alinear verticalmente */
+  align-items: center; /* Centrar verticalmente */
+  padding: 0 20px; /* Añadir relleno a los lados del navbar */
 }
 
-.footer__heading p {
-  text-decoration: none;
+.service-header .logo img {
+  height: 60px; /* Ajustar la altura del logo */
+  margin: auto; /* Centrar horizontalmente */
 }
 
-.footer__list {
+.navbar-services ul {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin-right: 15px;
 }
 
-.footer__social-list i {
-  font-size: 2rem;
-  color: #3afff8;
-  text-decoration: none;
-}
-
-.footer__social-list i:hover {
-  color: var(--azul-oscuro);
-  transition: 0.2s ease-out;
-}
-.footer__social-link {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.8rem;
-  transition: color 0.3s;
+.navbar-services ul li {
   display: inline-block;
-  padding: 10px;
+  margin: 0 15px; /* Reducir el margen entre elementos */
 }
-.footer__copyright {
-  font-size: 20px;
-  text-align: center;
+
+.navbar-services ul li:first-child {
+  margin-left: 0;
+}
+
+.navbar-services ul li a {
+  text-decoration: none;
   color: #fff;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Subrayado de los enlaces <a> del navbar */
+.navbar-services ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Ajustar la posición del subrayado */
+  transition: width 0.5s ease;
+}
+
+.navbar-services ul li a:hover::after {
+  width: 100%;
+}
+/* ----------------------- SERVICIOS PAGINA SERVICIOS ---------------------- */
+
+.services-page-title {
   margin-top: 60px;
+}
+
+.services-subtitle {
+  font-size: 18px;
+  margin: 30px auto;
+  color: var(--color-texto);
+  max-width: 1000px;
+}
+
+.services-subtitle span {
+  color: var(--color-verde-claro);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .services-subtitle {
+    margin: 20px;
+    text-align: center;
+  }
 }

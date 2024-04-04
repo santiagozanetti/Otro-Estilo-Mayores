@@ -6,55 +6,197 @@
     <title>Otro Estilo Mayores</title>
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class="service-header">
       <div class="logo">
         <img src="/images/logo-oe.png" alt="Logo" />
       </div>
-      <nav class="navbar">
+      <nav class="navbar navbar-services">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Actividades</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Ubicación</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#actividades">Actividades</a></li>
+          <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a href="../index.html#ubicacion">Ubicación</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <!-- Contenido principal -->
-      <section class="all-services-section">
-        <div class="services-list">
-          <div class="service">
-            <h2 class="service-title">Psicología</h2>
-            <p class="service-description">
-              Atención profesional en psicología para nuestros residentes.
-            </p>
+    <section class="services-section">
+      <h2 class="section-service-title services-page-title">Servicios</h2>
+      <p class="services-subtitle">
+        En <span>Otro Estilo</span> ofrecemos una casa de 400 mts2 con ascensor
+        moderno para sus tres plantas, habitaciones cálidas, amplias y
+        confortables, todas al exterior y con baños adaptados al adulto mayor.
+      </p>
+      <div class="services-grid">
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-user-md"></i>
           </div>
-          <div class="service">
-            <h2 class="service-title">Kinesiología</h2>
-            <p class="service-description">
-              Terapias de rehabilitación y ejercicios adaptados para mantener la
-              movilidad.
-            </p>
-          </div>
-          <div class="service">
-            <h2 class="service-title">Nutrición</h2>
-            <p class="service-description">
-              Dietas personalizadas para una alimentación saludable.
-            </p>
-          </div>
-          <!-- Aquí puedes seguir agregando más servicios -->
+          <h3 class="service-title">Psicología</h3>
+          <p class="service-description">
+            Atención profesional en psicología para nuestros residentes.
+          </p>
         </div>
-      </section>
-    </main>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3 class="service-title">Kinesiología</h3>
+          <p class="service-description">
+            Terapias de rehabilitación y ejercicios adaptados para mantener la
+            movilidad.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-carrot"></i>
+          </div>
+          <h3 class="service-title">Nutrición</h3>
+          <p class="service-description">
+            Dietas personalizadas para una alimentación saludable.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="service-title">Espacios comunes</h3>
+          <p class="service-description">
+            Áreas comunes para actividades recreativas y de convivencia.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="service-title">Técnicas de Recreación</h3>
+          <p class="service-description">
+            Programación de actividades recreativas adaptadas a los residentes.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-user-nurse"></i>
+          </div>
+          <h3 class="service-title">Enfermería y mucamas 24 hs.</h3>
+          <p class="service-description">
+            Servicio de enfermería y cuidado las 24 horas del día.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-prescription-bottle-alt"></i>
+          </div>
+          <h3 class="service-title">Farmacia con entrega 24 hs.</h3>
+          <p class="service-description">
+            Farmacia interna con servicio de entrega las 24 horas.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="service-title">
+            Luces de emergencia y detectores de humo
+          </h3>
+          <p class="service-description">
+            Instalaciones modernas para la seguridad de los residentes.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3 class="service-title">Calefacción central</h3>
+          <p class="service-description">
+            Sistema de calefacción y ventilación para el confort de todos.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-tv"></i>
+          </div>
+          <h3 class="service-title">TV por cable</h3>
+          <p class="service-description">Servicio de televisión por cable.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="service-title">Menús sabrosos y adaptados</h3>
+          <p class="service-description">
+            Planificación de menús personalizados según requerimientos médicos.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3 class="service-title">Peluquería- manicuría- pedicuría</h3>
+          <p class="service-description">
+            Servicios de peluquería y cuidado personal para residentes.
+          </p>
+        </div>
 
-    <footer>
-      <!-- Pie de página -->
-      <p>Derechos de autor © 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3 class="service-title">Gran jardín</h3>
+          <p class="service-description">
+            Amplias áreas verdes para el esparcimiento y la tranquilidad.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-utensil-spoon"></i>
+          </div>
+          <h3 class="service-title">Moderna cocina integrada</h3>
+          <p class="service-description">
+            Cocina equipada para preparar alimentos de calidad.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <h3 class="service-title">
+            Festejos de cumpleaños y fiestas de fin de año
+          </h3>
+          <p class="service-description">
+            Celebraciones especiales para momentos únicos.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <h3 class="service-title">Actividades de recreación</h3>
+          <p class="service-description">
+            Diversas actividades recreativas para el entretenimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="../images/logo-oe.png" alt="Logo" />
+      </div>
+      <div class="footer-content">
+        <p class="copyright">
+          © 2024 Otro Estilo Mayores. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
