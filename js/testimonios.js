@@ -1,30 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const opiniones = document.querySelectorAll(".opinion");
-  let indiceOpinionActual = 0;
+  const slides = document.querySelectorAll(".testimonial-slide");
+  let currentIndex = 0;
 
-  function mostrarOpinion(indice) {
-    opiniones.forEach((opinion) => opinion.classList.remove("active"));
-    opiniones[indice].classList.add("active");
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+        slide.style.opacity = "1"; // Mostrar el testimonio con opacidad
+        slide.style.visibility = "visible"; // Hacer visible el testimonio
+      } else {
+        slide.classList.remove("active");
+        slide.style.opacity = "0"; // Ocultar el testimonio con opacidad
+        slide.style.visibility = "hidden"; // Ocultar el testimonio
+      }
+    });
   }
 
-  function mostrarSiguienteOpinion() {
-    indiceOpinionActual = (indiceOpinionActual + 1) % opiniones.length;
-    mostrarOpinion(indiceOpinionActual);
-  }
+  document.querySelector(".next-btn").addEventListener("click", function () {
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    }
+    showSlide(currentIndex);
+  });
 
-  function mostrarOpinionAnterior() {
-    indiceOpinionActual =
-      (indiceOpinionActual - 1 + opiniones.length) % opiniones.length;
-    mostrarOpinion(indiceOpinionActual);
-  }
+  document.querySelector(".prev-btn").addEventListener("click", function () {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = slides.length - 1;
+    }
+    showSlide(currentIndex);
+  });
 
-  document
-    .getElementById("next-opinion")
-    .addEventListener("click", mostrarSiguienteOpinion);
-  document
-    .getElementById("prev-opinion")
-    .addEventListener("click", mostrarOpinionAnterior);
-
-  // Mostrar la primera opinión al cargar la página
-  mostrarOpinion(indiceOpinionActual);
+  // Mostrar el primer testimonio al cargar la página
+  showSlide(currentIndex);
 });

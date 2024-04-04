@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Enlace al archivo CSS de Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="/images/logo.png" alt="Logo" />
+        <img src="/images/logo-oe.png" alt="Logo" />
       </div>
       <nav class="navbar">
         <ul>
@@ -47,7 +42,7 @@
 
     <section class="about-us">
       <div class="about-us-content">
-        <h2>Sobre <span>Nosotros</span></h2>
+        <h2>Sobre Nosotros</h2>
         <h3>
           Somos una residencia geriátrica que tiene como objetivo brindar el
           mejor servicio en el cuidado del adulto mayor.
@@ -72,15 +67,14 @@
           </div>
           <p class="additional-info">
             Nuestras óptimas instalaciones edilicias adaptadas a las necesidades
-            y al confort de los adultos mayores hacen de Otro Estilo
-            <span>El lugar ideal para las personas mayores…</span>
+            y al confort de los adultos mayores hacen de
+            <span>Otro Estilo</span> el lugar ideal para las personas mayores…
           </p>
         </div>
       </div>
     </section>
 
-    <!-------------- ACTIVIDADES ---------------->
-
+    <!------------------------------ ACTIVIDADES ----------------------------------->
     <section class="seccion-actividades">
       <h2 class="titulo-seccion">Actividades</h2>
       <p class="descripcion-seccion">
@@ -195,98 +189,40 @@
 
     <!----------------------- SERVICIOS -------------------------->
     <section class="services-section">
-      <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <p class="section-subtitle">
-          En Otro Estilo ofrecemos una casa de 400 mts2 con ascensor moderno
-          para sus tres plantas, habitaciones cálidas, amplias y confortables,
-          todas al exterior y con baños adaptados al adulto mayor.
-        </p>
-
-        <div class="service-cards">
-          <div class="service-card">
-            <i class="fas fa-brain"></i>
-            <h3>Psicología</h3>
+      <h2 class="section-service-title">Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-user-md"></i>
           </div>
-
-          <div class="service-card">
+          <h3 class="service-title">Psicología</h3>
+          <p class="service-description">
+            Atención profesional en psicología para nuestros residentes.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
             <i class="fas fa-dumbbell"></i>
-            <h3>Kinesiología</h3>
           </div>
-
-          <div class="service-card">
-            <i class="fas fa-apple-alt"></i>
-            <h3>Nutrición</h3>
+          <h3 class="service-title">Kinesiología</h3>
+          <p class="service-description">
+            Terapias de rehabilitación y ejercicios adaptados para mantener la
+            movilidad.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <i class="fas fa-carrot"></i>
           </div>
-
-          <div class="service-card">
-            <i class="fas fa-tv"></i>
-            <h3>TV x cable</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-utensils"></i>
-            <h3>Amplia y moderna cocina integrada</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-user-nurse"></i>
-            <h3>Enfermería y mucamas 24 hs.</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-prescription-bottle-alt"></i>
-            <h3>Farmacia con entrega 24 hs.</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-smile"></i>
-            <h3>Actividades de recreación</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-tree"></i>
-            <h3>Gran jardín parquizado</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-basketball-ball"></i>
-            <h3>Profesional en Técnicas de Recreación</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-wind"></i>
-            <h3>Calefacción central y ventiladores de techo</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-cut"></i>
-            <h3>Peluquería- manicuría- pedicuría</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-chess-rook"></i>
-            <h3>Espacios comunes para recreación y actividades en general</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-utensils"></i>
-            <h3>
-              Menúes sabrosos y adaptados a las necesidades según patologías
-            </h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Luces de emergencia y detectores de humo</h3>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-birthday-cake"></i>
-            <h3>Festejos de cumpleaños y fiestas de fin de año</h3>
-          </div>
+          <h3 class="service-title">Nutrición</h3>
+          <p class="service-description">
+            Dietas personalizadas para una alimentación saludable.
+          </p>
         </div>
       </div>
+      <a href="pages/servicios.html" class="view-all-btn"
+        >Ver todos los servicios</a
+      >
     </section>
 
     <!---------------------- GALERIA IMAGENES ---------------------->
@@ -295,119 +231,176 @@
         <h2 class="gallery-title">Nuestras Instalaciones</h2>
         <div class="gallery-container">
           <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
+            <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
             <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
+              <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
+            <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
             <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
+              <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
+            <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
             <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
+              <img src="./images/_DSC0125.jpg" alt="Imagen 1" />
+              S
             </div>
           </div>
-
-          <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
-            <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
-            <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
-            <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/fondo.png" alt="Imagen 1" />
-            <div class="lightbox">
-              <img src="./images/fondo.png" alt="Imagen 1" />
-            </div>
-          </div>
-          <!-- Agregar más imágenes aquí -->
         </div>
       </div>
     </section>
 
     <!------------------------- TESTIMONIOS ----------------------->
-    <section id="opiniones">
-      <div class="opinion-card">
-        <h2>Opiniones De Nuestros Clientes</h2>
-        <div class="opinion-container">
-          <div class="opinion active">
-            <div class="opinion-content">
-              <p>
-                "Desde el primer día que nos acercamos a Otro Estilo nos
-                sentimos muy bienvenidas. Nos recibió Paula quien con mucha
-                calidez nos supo contener y nos brindó toda la ayuda para que
-                nuestra mamá que siempre estuvo cuidada por sus hijos se
-                sintiera cómoda y lo más confortable posible. Sentís que estás
-                en tu casa compartiendo con otras personas que necesitan
-                cuidados. Hay alegría, movimiento, afecto. Solo tengo palabras
-                de agradecimiento para cada una de las personas que cuidaron tan
-                amorosamente a mi mamá hasta sus 99 años. Gracias!"
-              </p>
-              <span>Juana Polo</span>
-            </div>
-          </div>
-          <div class="opinion active">
-            <div class="opinion-content">
-              <p>
-                "Muchas gracias por cuidar a mi abúrla con una excelencia,
-                profesionalisml y calidez en el trato para con ella. También les
-                agradezco la contención y el acompañamiento hacia toda la
-                familia."
-              </p>
-              <span>Florencia Sainz Polo</span>
-            </div>
-          </div>
-          <div class="opinion active">
-            <div class="opinion-content">
-              <p>
-                "Excelente la atención recibida. Muchas gracias por el
-                profesionalismo para tratar a las residentes y a la familia."
-              </p>
-              <span>Alberto Sainz</span>
-            </div>
-          </div>
-          <div class="opinion active">
-            <div class="opinion-content">
-              <p>
-                "La mejor atención respeto y amor para las personas mayores.
-                Gracias a todo el equipo de este lugar. Sin dudas no nos
-                equivocamos al elegirlos."
-              </p>
-              <span>Claudia Lezaola</span>
-            </div>
+    <section class="testimonial-section">
+      <h2 class="testimonial-title">Testimonios</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Desde el primer día nos sentimos muy bienvenidas. Nos recibió Paula
+            quien con mucha calidez nos supo contener y nos brindó toda la ayuda
+            para que nuestra mamá que siempre estuvo cuidada por sus hijos se
+            sintiera cómoda y lo más confortable posible. Gracias!
+          </p>
+          <p class="testimonial-author">- Juana Polo</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente la atención recibida. Muchas gracias por el
+            profesionalismo para tratar a las residentes y a la familia.
+          </p>
+          <p class="testimonial-author">- Alberto Sainz</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            La mejor atención, respeto y amor para las personas mayores. Gracias
+            a todo el equipo de este lugar. Sin dudas no nos equivocamos al
+            elegirlos.
+          </p>
+          <p class="testimonial-author">- Claudia Lezaola</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            ¡Excelente atención y calidez, tanto con las residentes como con la
+            familia! Gracias por hacernos sentir parte de una gran familia.
+          </p>
+          <p class="testimonial-author">- Dolly Polo</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Muchas gracias por cuidar a mi abúrla con una excelencia,
+            profesionalismo y calidez en el trato para con ella. También les
+            agradezco la contención y el acompañamiento hacia toda la familia.
+          </p>
+          <p class="testimonial-author">- Florencia Sainz Polo</p>
+        </div>
+      </div>
+      <button class="prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <!------------------------- PREGUNTAS FRECUENTES ------------------------------>
+    <section class="faq-section">
+      <h2 class="faq-title">Preguntas Frecuentes</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3 class="faq-question">¿Cuál es el proceso para registrarse?</h3>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+          <div class="faq-answer">
+            <p>
+              Para registrarte, simplemente ve a nuestra página de registro y
+              completa el formulario con tu información personal.
+            </p>
           </div>
         </div>
-        <div class="arrow-container">
-          <div id="prev-opinion" class="arrow">&lt;</div>
-          <div id="next-opinion" class="arrow">&gt;</div>
+        <div class="faq-item">
+          <h3 class="faq-question">¿Cómo puedo restablecer mi contraseña?</h3>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+          <div class="faq-answer">
+            <p>
+              Para restablecer tu contraseña, ve a la página de inicio de sesión
+              y haz clic en "¿Olvidaste tu contraseña?". Luego sigue las
+              instrucciones para restablecerla.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">¿Cómo puedo restablecer mi contraseña?</h3>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+          <div class="faq-answer">
+            <p>
+              Para restablecer tu contraseña, ve a la página de inicio de sesión
+              y haz clic en "¿Olvidaste tu contraseña?". Luego sigue las
+              instrucciones para restablecerla.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">¿Cómo puedo restablecer mi contraseña?</h3>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+          <div class="faq-answer">
+            <p>
+              Para restablecer tu contraseña, ve a la página de inicio de sesión
+              y haz clic en "¿Olvidaste tu contraseña?". Luego sigue las
+              instrucciones para restablecerla.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!------------------------- FOOTER------------------------------>
+    <!-------------------------------- FOOTER  -------------------------------->
     <footer class="footer">
-      <div class="container">
-        <p>
-          &copy; 2024 Residencia para Mayores - Otro Estilo / Tel.:4554-1776 /
-          Donado 1660, Villa Ortuzar
-        </p>
+      <div class="footer__container">
+        <div class="footer__section">
+          <h3 class="footer__heading">Horarios</h3>
+          <ul class="footer__list">
+            <p>Lunes a Viernes 9 a 19 hs.</p>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__heading">Contáctanos</h3>
+          <p>
+            <i class="fa-solid fa-map-marker-alt"></i> Donado 1660, Villa
+            Ortuzar
+          </p>
+          <p><i class="fa-solid fa-phone"></i> 4554-1776</p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            otroestilomayores@gmail.com
+          </p>
+          <p><i class="fa-brands fa-whatsapp"></i>11-5385-4865</p>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__heading">Redes Sociales</h3>
+          <ul class="footer__social-list">
+            <li>
+              <a
+                href="https://www.instagram.com/pilatesdelabahia/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/pilatesdelabahia/"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>Derechos reservados &copy; 2024</p>
       </div>
     </footer>
 
@@ -417,10 +410,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- Enlace al archivo JavaScript de Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/services.js"></script>
     <script src="./js/testimonios.js"></script>
-    <script src="./js/galery.js"></script>
+    <script src="./js/faq.js"></script>
     <script src="./js/images.js"></script>
   </body>
 </html>
