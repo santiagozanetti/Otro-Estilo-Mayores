@@ -55,8 +55,11 @@ header {
 
 .logo-text h2 {
   font-size: 16px;
+  width: 100%; /* Ancho al 100% */
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
+  margin: 0; /* Elimina el margen para evitar espacios adicionales */
 }
 
 .separator {
@@ -65,9 +68,10 @@ header {
 }
 
 .logo-text p {
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
   color: #fff;
+  text-transform: uppercase;
 }
 
 /* Resto de estilos... */
@@ -113,7 +117,7 @@ header {
 /* --------------- HERO --------------- */
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url(/images/fondo.png);
   background-size: cover;
   background-position: center;
@@ -126,10 +130,11 @@ header {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin: 40px 240px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hero p {
@@ -144,14 +149,20 @@ header {
 }
 
 .button {
-  width: 150px;
+  width: 156px;
   padding: 10px 20px;
   margin: 0 10px;
-  border: 2px solid #fff;
+  border: .5px solid #fff;
   background-color: transparent;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .button:hover {
@@ -759,6 +770,83 @@ img {
   transform: translateY(-50%) rotate(180deg);
 }
 
+/* ---------------------------------- UBICACION ------------------------------- */
+.location-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--color-verde-claro);
+  text-transform: uppercase;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    padding-top: 75%;
+  }
+}
+.contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  font-size: 24px;
+  color: var(--color-verde-claro);
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+}
+
+.contact-item p a {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.contact-item p a:hover {
+  color: #0056b3;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item i {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
 /* ---------------------------------- FOOTER ------------------------------- */
 .footer {
   display: flex;
@@ -767,6 +855,7 @@ img {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  margin-top: -4px;
 }
 
 .footer-logo img {
