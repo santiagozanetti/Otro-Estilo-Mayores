@@ -11,16 +11,17 @@
   <body>
     <header>
       <div class="logo">
-        <img src="/images/logo-oe.png" alt="Logo" />
+        <img src="/images/logo-oe.png" alt="Logo" loading="lazy" />
         <div class="logo-text">
           <h2>Otro estilo mayores</h2>
           <div class="separator"></div>
           <p>cuidado y bienestar</p>
         </div>
       </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#">Inicio</a></li>
+
+      <nav class="navbar" aria-label="navbar">
+        <ul class="menu">
+          <li><a href="#hero">Inicio</a></li>
           <li><a href="#actividades">Actividades</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#ubicacion">Ubicación</a></li>
@@ -29,12 +30,11 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="content">
-        <h1>Dedicado al bienestar de nuestros residentes mayores.</h1>
+        <h1>Cuidando de los que más queremos</h1>
         <div class="buttons">
-          <button class="button">Conocer Más</button>
-          <button class="button"><a href="#contacto">Contactar</a></button>
+          <button class="button"><a href="#contacto">Contactanos</a></button>
         </div>
       </div>
     </section>
@@ -63,7 +63,7 @@
               </p>
             </div>
             <div class="about-us-image">
-              <img src=./images/fondo.png alt="Sobre Nosotros" />
+              <img src=./images/fondo.png alt="Sobre Nosotros" loading="lazy"/>
             </div>
           </div>
           <p class="additional-info">
@@ -231,60 +231,60 @@
     <!---------------------- GALERIA IMAGENES ---------------------->
     <section class="gallery-section">
       <div class="container">
-        <h2 class="gallery-title">Instalaciones</h2>
+        <h2 class="gallery-title">Galería</h2>
         <div class="gallery-container">
           <div class="gallery-item">
-            <img src="./images/_DSC0152.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0152.jpg" alt=" 1" />
             <div class="lightbox">
-              <img src="./images/_DSC0152.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0152.jpg" alt=" 1" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0024.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0024.jpg" alt=" 1" />
             <div class="lightbox">
-              <img src="./images/_DSC0024.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0024.jpg" alt=" 1" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0063.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0063.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/_DSC0063.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0063.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0223.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0223.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/_DSC0223.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0223.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/comedor.jpg" alt="Imagen 1" />
+            <img src="./images/comedor.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/comedor.jpg" alt="Imagen 1" />
+              <img src="./images/comedor.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/living.jpg" alt="Imagen 1" />
+            <img src="./images/living.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/living.jpg" alt="Imagen 1" />
+              <img src="./images/living.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0008.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0008.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/_DSC0008.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0008.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0107.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/_DSC0107.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
           <div class="gallery-item">
-            <img src="./images/_DSC0164.jpg" alt="Imagen 1" />
+            <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
             <div class="lightbox">
-              <img src="./images/_DSC0164.jpg" alt="Imagen 1" />
+              <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@
 
     <!---------------------- UBICACION ------------------------>
     <section id="ubicacion" class="location-section">
-      <h2 class="section-title">Ubicación</h2>
+      <h2 class="section-ubi-title">Ubicación</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13140.42241299356!2d-58.47969371540528!3d-34.57619437800566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb71aaede3c47%3A0xc9e6fb1feb13614f!2sOtro%20Estilo%20Mayores!5e0!3m2!1ses-419!2sar!4v1712331506513!5m2!1ses-419!2sar"
         width="100%"
@@ -414,6 +414,7 @@
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
+        title="mapa"
       ></iframe>
     </section>
 
@@ -440,13 +441,44 @@
 
     <!-------------------------------- FOOTER  -------------------------------->
     <footer class="footer">
-      <div class="footer-logo">
-        <img src="./images/logo-oe.png" alt="Logo" />
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="./images/logo-oe.png" alt="Logo" />
+        </div>
+        <div class="contact-info-footer">
+          <h3>Contacto</h3>
+          <div class="contact-item-footer">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Donado 1660, Villa Ortúzar, CABA</p>
+          </div>
+          <div class="contact-item-footer">
+            <i class="fas fa-phone"></i>
+            <p>4554-1776</p>
+          </div>
+          <div class="contact-item-footer">
+            <i class="fab fa-whatsapp"></i>
+            <p>
+              <a href="https://wa.me/541153854865">11-5385-4865</a>
+            </p>
+          </div>
+          <div class="contact-item-footer">
+            <i class="far fa-envelope"></i>
+            <p>otroestilomayores@gmail.com</p>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="footer">
+          <h3>Enlaces Útiles</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="footer-content">
-        <p class="copyright">
-          © 2024 Otro Estilo Mayores. Todos los derechos reservados.
-        </p>
+      <div class="bottom-bar">
+        <p>&copy; 2024 Otro Estilo Mayores. Todos los derechos reservados.</p>
       </div>
     </footer>
 
@@ -455,10 +487,10 @@
       src="https://kit.fontawesome.com/e193f27ea7.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Enlace al archivo JavaScript de Swiper -->
     <script src="./js/services.js"></script>
     <script src="./js/testimonios.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/images.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

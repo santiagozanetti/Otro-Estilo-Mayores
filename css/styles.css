@@ -114,6 +114,66 @@ header {
   width: 100%;
 }
 
+/* Estilos para el menú hamburguesa */
+.menu-toggle,
+.close-icon {
+  display: none; /* Ocultar los íconos por defecto */
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar el ícono de hamburguesa en dispositivos móviles */
+  }
+
+  .menu.active .menu-toggle {
+    display: none; /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+  }
+
+  .menu.active .close-icon {
+    display: block; /* Mostrar el ícono de cerrar cuando el menú está activo */
+  }
+
+  .menu {
+    display: none; /* Ocultar el menú por defecto en dispositivos móviles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu.active {
+    display: flex; /* Mostrar el menú cuando está activo */
+  }
+}
+
 /* --------------- HERO --------------- */
 
 .hero {
@@ -129,45 +189,40 @@ header {
   justify-content: center;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin: 40px 240px;
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: 48px;
+  font-weight: 600;
   color: #fff;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  text-align: center;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  width: 156px;
+.buttons .button {
+  font-size: 18px;
   padding: 10px 20px;
-  margin: 0 10px;
-  border: .5px solid #fff;
+  margin-right: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
   background-color: transparent;
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
   text-transform: uppercase;
 }
 
-.button a {
-  text-decoration: none;
-  color: #fff;
+.buttons .button:hover {
+  background-color: var(--color-verde-claro);
 }
 
-.button:hover {
-  background-color: var(--color-verde-claro);
+.buttons .button a {
   color: #fff;
+  text-decoration: none;
 }
 
 /* Estilos específicos para dispositivos móviles */
@@ -527,32 +582,45 @@ img {
 .gallery-section {
   padding: 40px;
   margin-top: 20px;
-  background-color: #f7f7f7;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 40px;
+  color: var(--color-verde-claro);
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, auto);
-  grid-gap: 2px;
-  padding: 20px;
-}
-
-.gallery-title {
-  font-size: 2.3rem;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--color-verde-claro);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
 .gallery-item {
   position: relative;
+  overflow: hidden;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
-  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 10px;
+  }
+
+  .gallery-title {
+    font-size: 40px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 2px;
+  }
 }
 
 /*------------------------------- TESTIMONIOS ----------------------------*/
@@ -618,7 +686,6 @@ img {
 .next-btn {
   background-color: #b6c6c9;
   border: none;
-  color: #333;
   font-size: 20px;
   cursor: pointer;
   position: absolute;
@@ -744,18 +811,19 @@ img {
   font-size: 24px;
   margin-bottom: 10px;
   color: #333;
+  font-weight: 400;
 }
 
 .faq-answer {
-  max-height: 0; /* Inicialmente oculto */
-  overflow: hidden; /* Oculta el contenido que desborda */
-  padding: 0 20px; /* Añade un relleno opcional */
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
   color: #666;
-  transition: max-height 0.3s ease; /* Transición suave de altura máxima */
+  transition: max-height 0.3s ease;
 }
 
 .faq-item.open .faq-answer {
-  display: block; /* Cambiado a block para activar la transición */
+  display: block;
 }
 
 .arrow-icon {
@@ -770,12 +838,39 @@ img {
   transform: translateY(-50%) rotate(180deg);
 }
 
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .faq-section {
+    padding: 20px;
+    height: auto;
+    overflow: visible;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+  }
+
+  .faq-question {
+    font-size: 20px;
+  }
+
+  .faq-item {
+    padding: 20px 0;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+}
+
 /* ---------------------------------- UBICACION ------------------------------- */
 .location-section {
   text-align: center;
 }
 
-.section-title {
+.section-ubi-title {
   font-size: 2rem;
   margin-bottom: 30px;
   color: var(--color-verde-claro);
@@ -849,27 +944,115 @@ img {
 
 /* ---------------------------------- FOOTER ------------------------------- */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
+  background-color: #13131a;
   color: #fff;
+}
+
+.footer-container {
+  max-width: 1140px;
   padding: 20px;
-  margin-top: -4px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
 .footer-logo img {
-  height: 80px;
+  width: 100px;
+  height: auto;
 }
 
-.footer-content {
-  flex: 1;
-  margin-left: 20px;
+.contact-info-footer,
+.footer-nav {
+  flex-basis: calc(33.33% - 240px);
 }
 
-.copyright {
-  font-size: 14px;
+.contact-info-footer h3,
+.footer-nav h3 {
+  font-size: 1rem;
+  margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-item-footer,
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-item-footer i,
+.contact-item i {
+  margin-right: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.contact-item-footer p {
+  margin: 0;
+  text-decoration: none;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.contact-item-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Elimina los bullet points */
+}
+
+.footer-nav ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+  color: #0056b3;
+  transition: 0.3s;
+}
+
+.bottom-bar {
+  background-color: inherit;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Estilos para dispositivos móviles */
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 20px;
+  }
+
+  .contact-info-footer,
+  .footer-nav {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
+
+  .footer-nav ul li {
+    margin-bottom: 10px;
+  }
 }
 
 /* -----------------------------  PAG SERVICIOS -------------------------------- */
