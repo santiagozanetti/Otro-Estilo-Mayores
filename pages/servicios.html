@@ -15,17 +15,44 @@
   </head>
   <body>
     <header class="service-header">
-      <div class="logo">
-        <img src="/images/logo-oe.png" alt="Logo" />
-      </div>
-      <nav class="navbar navbar-services">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="../index.html#actividades">Actividades</a></li>
-          <li><a href="../index.html#servicios">Servicios</a></li>
-          <li><a href="../index.html#ubicacion">Ubicación</a></li>
-          <li><a href="../index.html#contacto">Contacto</a></li>
+      <nav class="nav container" aria-label="e">
+        <div class="nav__logo">
+          <h2 class="nav__title">Otro estilo mayores</h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+          <li class="nav__items">
+            <a href="../index.html#hero" class="nav__links">inicio</a>
+          </li>
+          <li class="nav__items">
+            <a href="#actividades" class="nav__links">Actividades</a>
+          </li>
+          <li class="nav__items">
+            <a href="#servicios" class="nav__links">servicios</a>
+          </li>
+
+          <li class="nav__items">
+            <a href="#ubicacion" class="nav__links">Ubicación</a>
+          </li>
+
+          <li class="nav__items">
+            <a href="#contacto" class="nav__links">Contacto</a>
+          </li>
+
+          <img
+            src="../images/close.svg"
+            class="nav__close"
+            alt="cruz para cerrar menú"
+          />
         </ul>
+
+        <div class="nav__menu">
+          <img
+            src="../images/menu.svg"
+            class="nav__img"
+            alt="menú hamburguesa"
+          />
+        </div>
       </nav>
     </header>
 
@@ -229,5 +256,6 @@
         <p>&copy; 2024 Otro Estilo Mayores. Todos los derechos reservados.</p>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
   </body>
 </html>

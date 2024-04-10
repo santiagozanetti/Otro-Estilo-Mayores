@@ -10,33 +10,56 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="/images/logo-oe.png" alt="Logo" loading="lazy" />
-        <div class="logo-text">
-          <h2>Otro estilo mayores</h2>
-          <div class="separator"></div>
-          <p>cuidado y bienestar</p>
+      <nav class="nav container" aria-label="e">
+        <div class="nav__logo">
+          <img src="./images/logo-oe.png" alt="Logo Otro Estilo" />
+          <h2 class="nav__title">Otro estilo</h2>
         </div>
-      </div>
 
-      <nav class="navbar" aria-label="navbar">
-        <ul class="menu">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#actividades">Actividades</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+        <ul class="nav__link nav__link--menu">
+          <li class="nav__items">
+            <a href="#hero" class="nav__links">inicio</a>
+          </li>
+          <li class="nav__items">
+            <a href="#actividades" class="nav__links">Actividades</a>
+          </li>
+          <li class="nav__items">
+            <a href="#servicios" class="nav__links">servicios</a>
+          </li>
+
+          <li class="nav__items">
+            <a href="#ubicacion" class="nav__links">Ubicación</a>
+          </li>
+
+          <li class="nav__items">
+            <a href="#contacto" class="nav__links">Contacto</a>
+          </li>
+
+          <img
+            src="./images/close.svg"
+            class="nav__close"
+            alt="cruz para cerrar menú"
+          />
         </ul>
+
+        <div class="nav__menu">
+          <img
+            src="./images/menu.svg"
+            class="nav__img"
+            alt="menú hamburguesa"
+          />
+        </div>
       </nav>
     </header>
 
     <section id="hero" class="hero">
       <div class="content">
-        <!--         <h1>Cuidando de los que más queremos</h1>
- -->
+        <h1>Otro estilo mayores</h1>
+        <div class="separator-hero"></div>
+        <p>El lugar ideal para la tercera edad</p>
+
         <div class="buttons">
-          <!--           <button class="button"><a href="#contacto">Contactanos</a></button>
- -->
+          <button class="button"><a href="#contacto">Contactanos</a></button>
         </div>
       </div>
     </section>
@@ -181,7 +204,7 @@
     <!------------------------ SEPARADOR ------------------------------->
     <section class="separador">
       <div class="imagen-fondo">
-        <img src="./images/fondo.png" alt="separador" />
+        <img src="./images/paisaje.jpg" alt="separador" />
         <div class="overlay"></div>
         <div class="texto-separador">
           <p class="separador-info">
@@ -234,67 +257,27 @@
     </section>
 
     <!---------------------- GALERIA IMAGENES ---------------------->
-    <section class="gallery-section">
-      <div class="container">
-        <h2 class="gallery-title">Galería</h2>
-        <div class="gallery-container">
-          <div class="gallery-item">
-            <img src="./images/_DSC0152.jpg" alt=" 1" />
-            <div class="lightbox">
-              <img src="./images/_DSC0152.jpg" alt=" 1" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0024.jpg" alt=" 1" />
-            <div class="lightbox">
-              <img src="./images/_DSC0024.jpg" alt=" 1" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0063.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/_DSC0063.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0223.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/_DSC0223.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/comedor.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/comedor.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/living.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/living.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0008.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/_DSC0008.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
-            <div class="lightbox">
-              <img src="./images/_DSC0107.jpg" alt=" 1" loading="lazy" />
-            </div>
-          </div>
-        </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/casaporfuera.jpg" alt="" loading="lazy" />
+        <img src="./images/_DSC0063.jpg" alt="" loading="lazy" />
+        <img src="./images/living.jpg" alt="" loading="lazy" />
+        <img src="./images/rosa.jpg" alt="" loading="lazy" />
       </div>
-    </section>
+      <div class="column">
+        <img src="./images/_DSC0152.jpg" alt="" loading="lazy" />
+        <img src="./images/_DSC0199.jpg" alt="" loading="lazy" />
+        <img src="./images/_DSC0223.jpg" alt="" loading="lazy" />
+        <img src="./images/baño.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="column">
+        <img src="./images/habitacion2.jpg" alt="" loading="lazy" />
+        <img src="./images/comedor.jpg" alt="" loading="lazy" />
+        <img src="./images/habitacion.jpg" alt="" loading="lazy" />
+        <img src="./images/habitacionazul2.jpg" alt="" loading="lazy" />
+      </div>
+    </div>
 
     <!------------------------- TESTIMONIOS ----------------------->
     <section class="testimonial-section">
@@ -424,21 +407,23 @@
     </section>
 
     <section id="contacto" class="contact">
-      <div class="contact-item">
+      <div class="contact-item-contact">
         <i class="fas fa-map-marker-alt"></i>
         <p>Donado 1660, Villa Ortúzar, CABA</p>
       </div>
-      <div class="contact-item">
+      <div class="contact-item-contact">
         <i class="fas fa-phone"></i>
-        <p>4554-1776</p>
+        <p>+5411 4554-1776</p>
       </div>
-      <div class="contact-item">
+      <div class="contact-item-contact">
         <i class="fab fa-whatsapp"></i>
         <p>
-          <a href="https://wa.me/541153854865">11-5385-4865</a>
+          <a href="https://wa.me/+5401153854865" target="_blank">
+            +5411 5385-4865</a
+          >
         </p>
       </div>
-      <div class="contact-item">
+      <div class="contact-item-contact">
         <i class="far fa-envelope"></i>
         <p>otroestilomayores@gmail.com</p>
       </div>
@@ -458,12 +443,14 @@
           </div>
           <div class="contact-item-footer">
             <i class="fas fa-phone"></i>
-            <p>4554-1776</p>
+            <p>+5411 4554-1776</p>
           </div>
           <div class="contact-item-footer">
             <i class="fab fa-whatsapp"></i>
             <p>
-              <a href="https://wa.me/541153854865">11-5385-4865</a>
+              <a href="https://wa.me/+5401153854865" target="_blank">
+                +5411 5385-4865</a
+              >
             </p>
           </div>
           <div class="contact-item-footer">
@@ -487,6 +474,23 @@
       </div>
     </footer>
 
+    <!------------ Botones Flotantes  -------------->
+    <div class="floating-buttons">
+      <button
+        onclick="scrollToTop()"
+        id="btnScrollToTop"
+        class="floating-button"
+      >
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+
+      <div class="floating-button whatsapp">
+        <a href="https://wa.me/+5401153854865" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
     <!-- custom js file -->
     <script
       src="https://kit.fontawesome.com/e193f27ea7.js"
@@ -497,5 +501,6 @@
     <script src="./js/faq.js"></script>
     <script src="./js/images.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/gotop.js"></script>
   </body>
 </html>
