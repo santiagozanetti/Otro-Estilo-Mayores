@@ -241,14 +241,6 @@ header {
   text-align: center;
 }
 
-.nav__link {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 30px;
-}
-
 .nav__link--menu {
   gap: 1em;
 }
@@ -259,6 +251,15 @@ header {
   font-weight: 600;
 }
 
+.nav__link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: right;
+  right: 20px;
+}
+
 .nav__links {
   color: #fff;
   text-decoration: none;
@@ -267,22 +268,22 @@ header {
   border-radius: 8px;
   transition: transform 0.3s ease, font-size 0.3s ease;
   display: inline-block;
+  position: relative;
 }
 
-/* subrayado de los link <a> del navbar */
-.nav ul li a::after {
+.nav__links::after {
   content: "";
   height: 3px;
   width: 0;
-  background: #fff;
+  background: #fff; /* Cambiar color del subrayado si lo deseas */
   position: absolute;
   left: 0;
-  bottom: -10px;
-  transition: 0.5s;
+  bottom: -3px; 
+  transition: width 0.3s ease; 
 }
 
-.nav ul li a:hover::after {
-  width: 100%;
+.nav__links:hover::after {
+  width: 100%; 
 }
 
 .nav__menu {
@@ -300,6 +301,23 @@ header {
 
 .nav__close {
   display: var(--show, none);
+}
+
+.nav__title-container {
+  display: block;
+}
+
+.nav__line {
+  border: 0;
+  border-top: 2px solid #fff;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.nav__subtitle {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 768px) {
