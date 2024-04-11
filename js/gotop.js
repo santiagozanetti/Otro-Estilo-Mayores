@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     // Muestra u oculta el botón basado en la posición vertical de la página
-    if (window.scrollY > 700) {
-      // Cambia 300 al número de píxeles a partir del cual deseas mostrar el botón
+    if (window.scrollY > 800) {
+      // Cambiado a 0 píxeles
       btnScrollToTop.style.display = "block";
     } else {
       btnScrollToTop.style.display = "none";
